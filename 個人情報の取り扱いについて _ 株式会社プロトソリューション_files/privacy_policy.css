@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+
+
+
+
+/* SP,PC共通
+
+---------------------------*/
+
+/* PC
+
+---------------------------*/
+@media screen and (min-width: 768px){
+.privacy_policy h1{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.policy{padding: 70px 0;}
+
+.policy p{
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.policy ol{
+  counter-reset: count;
+  margin-bottom: 15px;
+}
+
+.policy ol:last-child{margin-bottom: 0;}
+
+.policy > ol{margin-bottom: 50px;}
+
+.policy ol li{
+  position: relative;
+  padding-left: 22px;
+  box-sizing: border-box;
+  line-height: 1.7;
+}
+
+.policy ol li:before{
+  content: counter(count,decimal)".";
+  counter-increment: count;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.policy ol li:last-child{margin-bottom: 0;}
+
+.policy dl{margin-bottom: 50px;}
+
+.policy dl dt{
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.policy dl dd{line-height: 1.7;}
+
+.policy dl dd ul li{
+  position: relative;
+  margin-bottom: 5px;
+  line-height: 1.7;
+}
+
+.policy dl dd ul.list-01 li{padding-left: 30px;}
+.policy dl dd ul.list-01 li:before{
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  content:".";
+}
+
+.policy dl dd ul.list-02{margin: 20px 0 20px 40px;}
+
+.policy dl dd ul.list-02 > li{
+  padding-left: 1em;
+  text-indent: -1em;
+}
+#privacy_policy .policy dl dd ul.list-02{
+  margin-top: 30px;
+}
+#privacy_policy .policy dl dd ul.list-02 li{
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.policy dl dd ul.list-02 li ul{margin: 10px 0 20px 40px;}
+
+.policy dl dd ul.list-02 li ul li{margin-bottom: 10px;}
+
+.policy a,
+.policy-inq a{ color: #005bac;}
+
+.policy-inq{padding: 70px 0;}
+
+.policy-inq dl{margin-bottom: 30px;}
+
+.policy-inq dl dt{
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.policy-inq dl dd{line-height: 1.7;}
+
+.policy-inq p{line-height: 1.7;}
+
+.policy .inner-table{
+  width: 100%;
+	border: 1px solid #afafaf;
+  background: #fff;
+}
+.policy .inner-table.colum-03{
+  table-layout: fixed;
+}
+
+.policy .inner-table thead th,
+.policy .inner-table tbody th,
+.policy .inner-table tbody td{
+  font-size: 14px;
+  line-height: 1.7;
+  border-right: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding: 10px;
+}
+
+.policy .inner-table thead th:first-child{width: 1.8em;}
+
+.policy .inner-table tbody th{padding: 5px;}
+
+.policy .inner-table thead th:last-child,
+.policy .inner-table tbody th:last-child{border-right: none;}
+
+.policy .inner-table tbody th:last-child{border-bottom: none;}
+
+.policy .inner-table tbody td ul li:last-child{margin-bottom: 0;}
+
+.policy .inner-table.colum-02 tbody th{width: 8em;}
+
+.policy .list-03{margin: 20px 0 20px 40px;}
+
+.policy .list-04{margin: 10px 0 30px 40px;}
+
+.policy .list-03 dl dt{margin-bottom: 10px;}
+
+.policy ul.list-roman{
+  list-style-type: lower-roman;
+  list-style-position: inside;
+}
+
+.policy ul.list-roman ul{margin: 0 !important;}
+
+.policy .list-address {display: flex;}
+
+.policy .list-address > li{margin-right: 15px;}
+
+.policy dl dd ul.list-dot li{padding-left: 18px;}
+
+.policy dl dd ul.list-dot li:after{
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.policy p.mb-10{margin-bottom: 10px;}
+
+.policy ul.mt-00{margin-top: 0;}
+
+}
+
+/* SP
+
+---------------------------*/
+@media screen and (max-width: 767px){
+.privacy_policy h1{margin-bottom: 20px;}
+
+.policy p{
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.policy ol{counter-reset: count;}
+
+.policy > ol{margin-bottom: 25px;}
+
+.policy ol li{
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.policy ol li:before{
+  content: counter(count,decimal) ".";
+  counter-increment: count;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.policy dl{margin-bottom: 30px;}
+
+.policy dl dt{
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.policy dl dd{line-height: 1.5;}
+
+.policy dl dd ul li{
+  position: relative;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.policy dl dd ul.list-01 li{padding-left: 15px;}
+
+.policy dl dd ul.list-01 li:before{
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  content:".";
+}
+
+.policy dl dd ul.list-02{margin-bottom: 15px;}
+
+.policy dl dd ul.list-02 > li{
+  padding-left: 1em;
+  text-indent: -1em;
+}
+#privacy_policy .policy dl dd ul.list-02{margin-top: 15px;}
+
+#privacy_policy .policy dl dd ul.list-02 li{
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.policy dl dd ul.list-02 li ul{ margin: 10px 10px 10px 20px;}
+
+.policy dl dd ul.list-02 li ul li{margin-bottom: 10px;}
+
+.policy a,
+.policy-inq a{
+  color: #005bac;
+  word-break:break-all;
+}
+
+.policy-inq{padding: 35px 0;}
+
+.policy-inq dl{margin-bottom: 15px;}
+
+.policy-inq dl dt{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.policy-inq dl dd{line-height: 1.5;}
+
+.policy-inq p{line-height: 1.5;}
+
+.policy .inner-table{
+  width: 100%;
+	border: 1px solid #afafaf;
+  background: #fff;
+}
+.policy .inner-table.colum-03{
+  table-layout: fixed;
+}
+
+.policy .inner-table thead th,
+.policy .inner-table tbody th,
+.policy .inner-table tbody td{
+  font-size: 13px;
+  line-height: 1.7;
+  border-right: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding: 10px;
+}
+
+.policy .inner-table thead th{padding: 5px 10px;}
+
+.policy .inner-table thead th:first-child{width: 1.8em;}
+
+.policy .inner-table tbody th{padding: 5px;}
+
+.policy .inner-table thead th:last-child,
+.policy .inner-table tbody th:last-child{border-right: none;}
+
+.policy .inner-table tbody th:last-child{border-bottom: none;}
+
+.policy .inner-table tbody td ul li:last-child{margin-bottom: 0;}
+
+.policy .inner-table.colum-02 tbody th{width: 8em;}
+
+.policy .list-03{margin: 20px 10px 20px 10px;}
+
+.policy .list-04{margin: 10px 10px 30px 20px;}
+
+.policy .list-03 dl dt{margin-bottom: 10px;}
+
+.policy ul.list-roman{
+  list-style-type: lower-roman;
+  list-style-position: inside;
+}
+
+.policy ul.list-roman ul{margin: 0 !important;}
+
+.policy .list-address > li{margin-right: 15px;}
+
+.policy dl dd ul.list-dot li{padding-left: 18px;}
+
+.policy dl dd ul.list-dot li:after{
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+}
+

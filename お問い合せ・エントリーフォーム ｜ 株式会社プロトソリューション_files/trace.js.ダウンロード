@@ -1,0 +1,15 @@
+(function(){
+  var _bownow_ts_src = 'https://contents.bownow.jp/js/UTC_b2939a27df17679855af/trace.js';
+  _bownow_ts_src = _bownow_ts_src + '?referer=' + encodeURIComponent(window.location.href);
+
+  var _bownow_ts = document.createElement('script');
+  _bownow_ts.charset = 'utf-8';
+  _bownow_ts.src = _bownow_ts_src;
+  document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
+  if (window._bownow_ts) {
+    try {
+      document.getElementsByTagName('head')[0].removeChild(window._bownow_ts);
+    } catch (e) {}
+  }
+  window._bownow_ts = _bownow_ts;
+}).call(this);

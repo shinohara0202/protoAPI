@@ -1,0 +1,688 @@
+
+$(function(){
+	//条件分岐によるメール操作
+	$("#post-2 .parent").on("change", function() {
+		var parVal = $(this).val(),
+			children = $("#post-2 .children");
+		children.empty();
+		if (parVal === 'ITエンジニア') {
+			children.append('<option value="">選択してください</option><option value="ブリッジSE（仙台）">ブリッジSE（仙台）</option><option value="システムエンジニア（PHP,TypeScript 仙台）">システムエンジニア（PHP,TypeScript 仙台）</option><option value="AIエンジニア（仙台）">AIエンジニア（仙台）</option><option value="自社プロダクト(SaaS)開発エンジニア（仙台）">自社プロダクト(SaaS)開発エンジニア（仙台）</option><option value="インフラエンジニア（リーダー候補）">インフラエンジニア（リーダー候補）</option><option value="プロジェクトマネージャー（日本最大級クルマ情報メディア（仙台））">プロジェクトマネージャー（日本最大級クルマ情報メディア（仙台））</option><option value="Webプログラマー（PHP,TypeScript,Golang/リーダー候補（仙台））">Webプログラマー（PHP,TypeScript,Golang/リーダー候補（仙台））</option><option value="自社プロダクトのカスタマーサポート（仙台）">自社プロダクトのカスタマーサポート（仙台）</option><option value="インフラエンジニア（リーダー候補（東京））">インフラエンジニア（リーダー候補（東京））</option><option value="iOS／Androidアプリエンジニア（東京）">iOS／Androidアプリエンジニア（東京）</option><option value="AIエンジニア（東京）">AIエンジニア（東京）</option><option value="ブリッジSE（東京）">ブリッジSE（東京）</option><option value="フルスタックエンジニア（東京）">フルスタックエンジニア（東京）</option><option value="テストエンジニア（東京）">テストエンジニア（東京）</option><option value="自社プロダクト(SaaS)開発エンジニア（東京）">自社プロダクト(SaaS)開発エンジニア（東京）</option><option value="WEB開発ディレクター（東京）">WEB開発ディレクター（東京）</option><option value="データサイエンティスト（東京）">データサイエンティスト（東京）</option><option value="Webマーケター（沖縄）">Webマーケター（沖縄）</option><option value="ブリッジSE（沖縄）">ブリッジSE（沖縄）</option><option value="Web開発ディレクター（沖縄）">Web開発ディレクター（沖縄）</option><option value="プロジェクトマネージャー、リーダー（沖縄）">プロジェクトマネージャー、リーダー（沖縄）</option><option value="テックリードエンジニア">テックリードエンジニア</option><option value="AI・RPAエンジニア（沖縄）">AI・RPAエンジニア（沖縄）</option><option value="自社プロダクト(SaaS)開発エンジニア（沖縄）">自社プロダクト(SaaS)開発エンジニア（沖縄）</option><option value="AIエンジニア（沖縄）">AIエンジニア（沖縄）</option><option value="システムエンジニア（沖縄）">システムエンジニア（沖縄）</option><option value="iOS／Androidアプリエンジニア（沖縄）">iOS／Androidアプリエンジニア（沖縄）</option><option value="Webエンジニア（沖縄）">Webエンジニア（沖縄）</option><option value="テストエンジニア（沖縄）">テストエンジニア（沖縄）</option><option value="データベースエンジニア（沖縄）">データベースエンジニア（沖縄）</option><option value="フルスタックエンジニア（沖縄）">フルスタックエンジニア（沖縄）</option><option value="インフラエンジニア（沖縄）">インフラエンジニア（沖縄）</option>');
+		} else if (parVal === 'クリエイティブ') {
+			children.append('<option value="">選択してください</option><option value="Webディレクター">Webディレクター</option>');
+		} else if (parVal === 'Web制作'){
+			children.append('<option value="">選択してください</option><option value="マークアップエンジニア（未経験OK）">マークアップエンジニア（未経験OK）</option><option value="Webデザイナー">Webデザイナー</option><option value="Webディレクター">Webディレクター</option><option value="Shopify構築エンジニア">Shopify構築エンジニア</option>');
+		} else if (parVal === 'Web広告運用'){
+			children.append('<option value="">選択してください</option><option value="広告運用オペレーター（未経験OK）">広告運用オペレーター（未経験OK）</option><option value="広告運用ディレクター">広告運用ディレクター</option><option value="アカウントマネージャー">アカウントマネージャー</option><option value="VBA・RPAエンジニア（部内の自動化）">VBA・RPAエンジニア（部内の自動化）</option>');
+		} else if (parVal === 'Webデザイナー'){
+			children.append('<option value="">選択してください</option><option value="動画クリエイター">動画クリエイター</option><option value="UI/UXデザイナー">UI/UXデザイナー</option>');
+		} else if (parVal === '営業'){
+			children.append('<option value="">選択してください</option><option value="リスティング広告営業（東京）">リスティング広告営業（東京）</option><option value="インサイドセールス（東京）">インサイドセールス（東京）</option><option value="営業事務（東京）">営業事務（東京）</option><option value="営業企画 / マーケティング（東京）">営業企画 / マーケティング（東京）</option><option value="SNS広告営業（東京）">SNS広告営業（東京）</option><option value="M&A担当者（東京）">M&A担当者（東京）</option><option value="ソリューション営業（東京）">ソリューション営業（東京）</option><option value="ビジネスプロモーター（新規事業推進・M&A）">ビジネスプロモーター（新規事業推進・M&A）</option><option value="不動産情報グーホームの営業職（経験者）">不動産情報グーホームの営業職（経験者）</option><option value="不動産情報グーホームの営業職（未経験）">不動産情報グーホームの営業職（未経験）</option><option value="クルマ情報グーネットの営業職（経験者）">クルマ情報グーネットの営業職（経験者）</option><option value="クルマ情報グーネットの営業職（未経験）">クルマ情報グーネットの営業職（未経験）</option>');
+		} else if (parVal === 'テレマーケティング・カスタマーサービス'){
+			children.append('<option value="">選択してください</option><option value="コールセンター マネージャー">コールセンター マネージャー</option>');
+		} else if (parVal === '管理部'){
+			children.append('<option value="">選択してください</option><option value="コーポレートガバナンス">コーポレートガバナンス</option><option value="内部監査業務">内部監査業務</option><option value="会計スペシャリスト（M&A・連結経理業務）">会計スペシャリスト（M&A・連結経理業務）</option><option value="戦略人事(HRビジネスパートナー)">戦略人事(HRビジネスパートナー)</option><option value="社会保険労務士">社会保険労務士</option>');
+		} else {
+			children.append('<option value="">選択してください</option>');
+		}
+	});
+	var occupationsVal = $('input[name="occupations"]').val(),
+		occupationsPar = $('input[name="occupations"]').parent();
+	occupationsPar.prepend(occupationsVal);
+});
+
+$(function(){
+
+//////共通js//////
+
+//viewport UA切り替え
+
+	var ua = navigator.userAgent;
+
+	if ((ua.indexOf('iPhone') > 0) || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)) {
+
+		// SP
+
+		$('head').prepend('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">');
+
+	}else{
+
+		// PS,タブレット
+
+		$('head').prepend('<meta name="viewport" content="width=1024" />');
+
+	}
+
+//SP,PC画像切り替え
+
+	function imgSwitch(judg){
+
+		var imgSwitch = $('.imgSwitch');
+
+		if(judg){
+
+			imgSwitch.each(function(){
+
+				$(this).attr('src',$(this).attr('src').replace('-sp','-pc'));
+
+			});
+
+		}else{
+
+			imgSwitch.each(function(){
+
+				$(this).attr('src',$(this).attr('src').replace('-pc','-sp'));
+
+			});
+
+		}
+
+	}
+
+	var isPC = false;
+
+	$(window).on('load resize',function(){
+
+		var winWid = window.innerWidth;
+
+		var isPC = (winWid > 767)? true : false;
+
+		imgSwitch(isPC);
+
+	});
+
+
+
+//////ヘッダーjs(SP)//////
+
+$('header').append('<div class="spMenuBk"></div>');
+
+//第2階層表示,非表示
+
+$('#spHead .icon-animation').on('click', function(){
+
+	$('.spMenuBk').fadeToggle();
+
+	$(this).toggleClass('is-open');
+
+	$('#spHead .slideMenu').toggleClass('opened');
+
+	$('#spHead .slideMenu > ul > li ul').slideUp();
+
+	$('#spHead .slideMenu > ul > li > a').removeClass('open');
+
+});
+
+
+//第3階層表示,非表示
+
+$('.acc').on('click', function(){
+
+	$(this).next('ul').slideToggle(500);
+
+	$(this).toggleClass('open');
+
+});
+
+//メニュー外クリック
+
+$('.spMenuBk').on('click', function(){
+
+	$(this).fadeOut();
+
+	$('#spHead .icon-animation').removeClass('is-open');
+
+	$('#spHead .slideMenu').removeClass('opened');
+
+	$('#spHead .slideMenu > ul > li ul').slideUp();
+
+	$('#spHead .slideMenu > ul > li > a').removeClass('open');
+
+});
+
+
+
+//////ヘッダーjs(PC)//////
+
+//ヘッダーFIX
+
+	$(window).on('load scroll',function(){
+
+		var scroll_value = $(window).scrollTop();
+
+		if(scroll_value > 500){
+
+			$('#pcHead').addClass('header-hide');
+
+		} else {
+
+			$('#pcHead').removeClass('header-hide');
+
+		}
+
+	});
+
+//globalNavi下線(slide-line)アニメーション
+
+var $nav = $("#pcHead #globalNavi"),
+
+    $slideLine = $("#pcHead #slide-line"),
+
+    $currentItem = $("#pcHead .current-item");
+
+
+
+	$(window).on('load scroll resize',function(){
+
+	// Menu has active item
+
+		if ($currentItem[0]) {
+
+			$slideLine.css({
+
+				"width": $currentItem.width(),
+
+				"left": $currentItem.position().left
+
+			});
+
+		} else {
+
+			$slideLine.css({
+
+				"left": $("#pcHead .globalNavi01").position().left
+
+			});
+
+		}
+
+	});
+
+  // Underline transition
+
+  $($nav).find("li").hover(
+
+    // Hover on
+
+    function(){
+
+      $slideLine.css({
+
+        "width": $(this).width(),
+
+        "left": $(this).position().left
+
+      });
+
+    },
+
+    // Hover out
+
+    function(){
+
+      if ($currentItem[0]) {
+
+        // Go back to current
+
+        $slideLine.css({
+
+          "width": $currentItem.width(),
+
+          "left": $currentItem.position().left
+
+        });
+
+      } else {
+
+        // Disapear
+
+        $slideLine.width(0);
+
+        $slideLine.css({
+
+          "left": $("#pcHead .globalNavi01").position().left
+
+        });
+
+      }
+
+    }
+
+   );
+
+// contentDropMenuにhover時の(slide-line)アニメーション
+
+  $('#pcHead .contentDropMenu').hover(
+
+    // Hover on
+
+    function(){
+
+			if($(this).hasClass('company')){ $slideLine.css({ "width": $("#pcHead .globalNavi01").width(),"left": $("#pcHead .globalNavi01").position().left});}
+
+			else if($(this).hasClass('service')){ $slideLine.css({ "width": $("#pcHead .globalNavi02").width(),"left": $("#pcHead .globalNavi02").position().left});}
+
+			else if($(this).hasClass('news')){ $slideLine.css({ "width": $("#pcHead .globalNavi03").width(),"left": $("#pcHead .globalNavi03").position().left});}
+
+			else if($(this).hasClass('recruit')){ $slideLine.css({ "width": $("#pcHead .globalNavi04").width(),"left": $("#pcHead .globalNavi04").position().left});}
+
+			else if($(this).hasClass('irc')){ $slideLine.css({ "width": $("#pcHead .globalNavi05").width(),"left": $("#pcHead .globalNavi05").position().left});}
+
+			else if($(this).hasClass('pLab')){ $slideLine.css({ "width": $("#pcHead .globalNavi06").width(),"left": $("#pcHead .globalNavi06").position().left});}
+
+    },
+
+    // Hover out
+
+    function(){
+
+      if ($currentItem[0]) {
+
+        // Go back to current
+
+        $slideLine.css({
+
+          "width": $currentItem.width(),
+
+          "left": $currentItem.position().left
+
+        });
+
+      } else {
+
+        // Disapear
+
+        $slideLine.width(0);
+
+        $slideLine.css({
+
+          "left": $("#pcHead .globalNavi01").position().left
+
+        });
+
+      }
+
+    }
+
+   );
+
+// グローバルメニュー以外の要素クリック時
+
+	$(document).on('click touchend', function(e) {
+
+		if (!$(e.target).closest('#pcHead #headerContent,#pcHead #globalNavi').length) {
+
+			$('#pcHead #headerContent').css('height',0);
+
+		}
+
+	});
+
+//グローバルメニューhover時
+$('#pcHead #globalNavi ul > li:lt(5), #pcHead #headerContent .contentDropMenu').hover(function(){
+	var slug, $dropmenu;
+
+	// 各種スラッグを取得
+	if($(this).hasClass('globalNavi01') || $(this).hasClass('company')){ slug = 'company'}
+	if($(this).hasClass('globalNavi02') || $(this).hasClass('service')){ slug = 'service'}
+	if($(this).hasClass('globalNavi03') || $(this).hasClass('news')){ slug = 'news'}
+	if($(this).hasClass('globalNavi04') || $(this).hasClass('recruit')){ slug = 'recruit'}
+	if($(this).hasClass('globalNavi05') || $(this).hasClass('irc')){ slug = 'irc'}
+	if($(this).hasClass('globalNavi06') || $(this).hasClass('pLab')){ slug = 'pLab'}
+
+	// ドロップメニュー先を取得
+	$dropmenu = $('#pcHead .contentDropMenu.' + slug);
+
+	// ドロップメニューがあれば表示
+	if ($dropmenu[0]) {
+		$dropmenu.addClass('activeMenu');
+		$('#pcHead #headerContent').css('height','400px');
+		$('.spMenuBk').stop(true).fadeIn();
+	}
+},
+
+function(){
+	$('#pcHead .contentDropMenu').removeClass('activeMenu');
+	$('#pcHead #headerContent').css('height',0);
+	$('.spMenuBk').stop(true).delay(10).fadeOut();
+});
+
+
+//pepper-icon アニメーション維持
+
+  $('#pcHead #globalNavi .gNaviLab a').hover(function(){
+
+		$('#pcHead #globalNavi .gNaviLab a').addClass('pepper-on');
+
+	},
+
+  function(){
+
+    $('#pcHead #globalNavi .gNaviLab a').removeClass('pepper-on');
+
+  });
+
+//ページトップスクロールボタン
+
+	var topBtn=$('.pageTop');
+
+	topBtn.hide();
+
+	$(window).scroll(function(){
+
+		if($(this).scrollTop()>600){
+
+			topBtn.fadeIn();
+
+		}else{
+
+			topBtn.fadeOut();
+
+		}
+
+	});
+
+	topBtn.click(function(){
+
+		$('body,html').animate({scrollTop: 0},500);
+
+		return false;
+
+	});
+
+//パララックス（ファースト）
+
+	$(window).on('load scroll resize',function(){
+
+		var scroll_value = $(window).scrollTop();
+
+		var window_value = $(window).width();
+
+		var para_value_sp = scroll_value/2 -50;
+
+		var para_value_pc = scroll_value/2 -100;
+
+		if(window_value < 767){
+
+			$('.parallaxFirst .parallaxImg').css({
+
+				'transform':'translateY('+para_value_sp+'px)',
+
+				'-o-transform':'translateY('+para_value_sp+'px)',
+
+				'-ms-transform':'translateY('+para_value_sp+'px)',
+
+				'-moz-transform':'translateY('+para_value_sp+'px)',
+
+				'-webkit-transform':'translateY('+para_value_sp+'px)',
+
+			});
+
+		} else {
+
+			$('.parallaxFirst .parallaxImg').css({
+
+				'transform':'translateY('+para_value_pc+'px)',
+
+				'-o-transform':'translateY('+para_value_pc+'px)',
+
+				'-ms-transform':'translateY('+para_value_pc+'px)',
+
+				'-moz-transform':'translateY('+para_value_pc+'px)',
+
+				'-webkit-transform':'translateY('+para_value_pc+'px)',
+
+			});
+
+		}
+
+	});
+
+//PICKUPスライダー
+
+	var sliderState = 'destroy';
+
+	var slider;
+
+	var w = $(window).width();
+
+	var x = 767;
+
+	if (w <= x) {
+
+		slider = $('.pickUpSlider , .slider-box').bxSlider({
+
+			auto: true
+
+		});
+
+		sliderState = 'build';
+
+	}
+
+	$(window).on('resize', function() {
+
+		w = $(window).width();
+
+		x = 767;
+
+		if (w <= x && sliderState == 'destroy') {
+
+			slider = $('.pickUpSlider, .slider-box').bxSlider({
+
+				auto: true
+
+			});
+
+			sliderState = 'build';
+
+		} else if (w > x && sliderState == 'build') {
+
+			slider.destroySlider();
+
+			sliderState = 'destroy';
+
+		}
+
+	});
+
+//クラスcol 高さ調節
+
+	$('.contents .js-height').matchHeight();
+
+
+//////トップページjs//////
+
+//スムーズスクロール（サイトを作りたい・ページ内リンク）
+
+	$(function(){
+
+		// #で始まるアンカーをクリックした場合に処理
+
+		$('a[href^=#]').click(function() {
+
+		// スクロールの速度
+
+		var speed = 400; // ミリ秒
+
+		// アンカーの値取得
+
+		var href= $(this).attr("href");
+
+		// 移動先を取得
+
+		var target = $(href == "#" || href == "" ? 'html' : href);
+
+		// 移動先を数値で取得
+
+		var position = target.offset().top;
+
+		// スムーススクロール
+
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+
+		return false;
+
+		});
+
+	});
+	//モーダル
+	var pageWrap = $("body"), 
+	    targetBtn = $(".lightbox"),
+	    closeBtn = $(".close a"),
+	    targetWindow = $(".modal");
+
+	// モーダルOPEN
+	targetBtn.on("click",function(){
+		pageWrap.prepend("<div id='overlay'></div>");
+		$("#overlay").fadeIn();
+		targetWindow.fadeIn();
+		return false;
+	});
+
+	// モーダルCLOSE
+	$(document).on("click","#overlay",function(){
+		$("#overlay").fadeOut().queue(function(){
+			$("#overlay").remove();
+		});
+		targetWindow.fadeOut();
+		return false;
+	});
+
+	closeBtn.on("click",function(){
+		$("#overlay").trigger("click");
+		return false;
+	});
+
+　
+	// フロート　PCニュースページ（SNSロゴ）
+	/*var box    = $('.sns-link');
+    var boxTop = box.offset().top;
+    $(window).scroll(function () {
+        if($(window).scrollTop() >= boxTop ) {
+            box.addClass('fixed');
+        } else {
+            box.removeClass('fixed');
+        }
+    });*/
+
+
+	/**
+	 * snsリスト追従
+	 */
+	function scrollFixed (option) {
+		var setting = $.extend({
+			target 	: null,
+			breakpoint : 768,
+		}, option || {});
+		
+		var $target = $(setting.target);
+		var $spacer = $('<div class="scrollFixed-spacer"></div>');
+		var timer 	= null;
+
+		function posCheck () {
+			var param = getParam();
+			param.scroll = $(window).scrollTop();
+
+			var pos = setPos(param);
+
+			if(pos.isStop){
+				$target
+				.css({
+					'position': 'absolute',
+					'top': pos.stopPos
+				})
+				.addClass('scrollFixed-stop');
+
+			} else if(pos.isFixed){
+				$target
+				.css({
+					'position': 'fixed',
+					'top': pos.fixedPos,
+				})
+				.addClass('scrollFixed')
+				.removeClass('scrollFixed-stop');
+
+				if (!is_pc()) {
+					$target.after($spacer);
+					$spacer.css({
+						'width': $target.width(),
+						'height': param.spacer + 'px',
+					});
+				}
+				
+			} else {
+				$target.attr('style', '').removeClass('scrollFixed scrollFixed-stop');
+				$spacer.remove();
+			}
+		}
+
+		function setPos (param) {
+			if ( is_pc() ) {
+				return {
+					isStop : (param.scroll + param.content) > param.bottom,
+					stopPos : param.bottom - param.content - param.offset,
+					isFixed : param.top < param.scroll - param.topOffset,
+					fixedPos : param.top + param.offset,
+				}
+			} else {
+				return {
+					isStop : false,
+					stopPos : null,
+					isFixed : param.top < param.scroll - param.topOffset,
+					fixedPos : param.offset,
+				}
+			}
+		}
+
+		function getParam () {
+			if ( is_pc() ) {
+				return {
+					top : $('#pcHead').height() + 30,
+					topOffset: 120,
+					bottom :  $('.news-list').offset().top + $('.news-list').height() - 100,
+					content : $('.sns-link').height(),
+					offset: 30,
+					spacer: 240,
+				};
+			} else {
+				return {
+					top : $('.news-list > h1').offset().top + $('.news-list > h1').height() - 15,
+					topOffset: 0,
+					bottom :  $('.news-list').offset().top + $('.news-list').height() - 30,
+					content : $('.sns-link').height(),
+					offset: 15,
+					spacer: 40,
+				};
+			}
+		}
+
+		function is_pc () {
+			return $(window).width() > setting.breakpoint;
+		}
+
+		// ターゲットがあれば発火
+		if ($target[0]) {
+			$(window).on('resize scroll',function() {
+				clearTimeout( timer );
+				timer = setTimeout(posCheck(), 50 );
+			});
+
+			posCheck();
+		}
+	};
+
+	new scrollFixed({
+		target: '.sns-link'
+	});
+
+	// サイト内検索
+	$(".gNaviSearch .btn_open").on("click", function () {
+		$(".site_search").fadeIn();
+		return false;
+	});
+
+	$(".site_search .btn_close a").on("click", function () {
+		$(".site_search").fadeOut();
+		return false;
+	});
+});
